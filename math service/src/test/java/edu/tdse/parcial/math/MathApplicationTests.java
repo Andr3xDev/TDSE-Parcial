@@ -1,10 +1,10 @@
-package edu.tdse.parcial;
+package edu.tdse.parcial.math;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ParcialApplicationTests {
+class MathApplicationTests {
 
 	@Test
 	void contextLoads() {
