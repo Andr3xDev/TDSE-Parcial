@@ -9,11 +9,9 @@ import java.net.URL;
 public class HttpConnection {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String GET_URL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=fb&apikey=Q1QZFVJQ21K7C6XM";
 
-    public static void main(String[] args) throws IOException {
-
-        URL obj = new URL(GET_URL);
+    public static String getAll(String url) throws IOException {
+        URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
         con.setRequestProperty("User-Agent", USER_AGENT);
@@ -35,9 +33,10 @@ public class HttpConnection {
 
             // print result
             System.out.println(response.toString());
+            return response.toString();
         } else {
             System.out.println("GET request not worked");
+            return null;
         }
-        System.out.println("GET DONE");
     }
 }

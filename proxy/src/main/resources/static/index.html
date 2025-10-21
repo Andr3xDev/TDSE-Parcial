@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Example</title>
+    <title>Exam 2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Form with GET</h1>
+    <h1>Get a Collatz Sequence</h1>
     <form action="/hello">
-        <label for="name">Name:</label><br>
+        <label for="name">Initial Value (Must be n>0):</label><br>
         <input type="text" id="name" name="name" value="John"><br><br>
         <input type="button" value="Submit" onclick="loadGetMsg()">
     </form>
@@ -21,7 +21,7 @@
         document.getElementById("getrespmsg").innerHTML =
         this.responseText;
         }
-        xhttp.open("GET", "/hello?name="+nameVar);
+        xhttp.open("GET", "/sequence?value="+nameVar);
         xhttp.send();
         }
     </script>
